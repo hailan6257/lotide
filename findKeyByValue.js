@@ -4,12 +4,22 @@ const assertEqual = (actual, expected) => {
 };
 
 // ACTUAL FUNCTION
+// const findKeyByValue = (obj, value) => {
+//   for (let key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       if (obj[key] === value) {
+//         return key;
+//       }
+//     }
+//   }
+//   return undefined;
+// };
+
 const findKeyByValue = (obj, value) => {
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      if (obj[key] === value) {
-        return key;
-      }
+  const keys = Object.keys(obj);
+  for (let key of keys) {
+    if (obj[key] === value) {
+      return key;
     }
   }
   return undefined;
