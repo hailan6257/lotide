@@ -12,7 +12,7 @@ const countLetters = (str) => {
       if (result[letter]) {
         result[letter] += 1;
       } else {
-        result[letter] + 1;
+        result[letter] = 1;
       }
     }
   }
