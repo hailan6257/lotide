@@ -1,12 +1,17 @@
 //ACTUAL FUNCTION
-const map = function(array) {
+const map = function(array, callback) {
   const results = [];
-  array.forEach(element => results.push(element[0]));
+  for (let item of array) {
+    results.push(callback(item));
+  }
   return results;
 };
 
 module.exports = map;
 
 // //TEST CODE
-// const words = ["ground", "control", "to", "major", "tom"];
-// assertArraysEqual(map(words), ['g', 'c', 't', 'm', 't']);
+/*
+const words = ["ground", "control", "to", "major", "tom"];
+const results1 = map(words, word => word[0]);
+assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+*/
